@@ -1,7 +1,5 @@
-var http = require('http');
-
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(8080); //the server object listens on port 8080
+// `/api/hello.js`
+export default function hello(req, res) {
+  res.statusCode = 200;
+  res.json({ message: 'It works' });
+}
